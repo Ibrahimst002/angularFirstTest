@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <img src="/assets/download.jpg">
+      <h1>WELCOME TO UBUNTU</h1>
+      {{Year}}
+      <input class="form-control" type="text" [(ngModel)]="Year">
+
+      <h3>KINDLY ENTER YOUR INFORMATION</h3>
+      <hr>
+      <label>First Name</label>
+      <input class="form-control" type="text" [(ngModel)]="FirstName">
+      <hr>
+      <label>Last Name</label>
+      <input class="form-control" type="text" [(ngModel)]="lastName">
+      <hr>
+      <label>Address</label>
+      <input class="form-control" type="text" [(ngModel)]="address">
+
+      <label>age</label>
+      <input class="form-control" type="number" [(ngModel)]="age">
+
+      <p>Welcome {{FirstName.toUpperCase() }}{{" "}}{{ lastName.toUpperCase()}}</p>
+      
+      <hr>
+      <label>View available Courses</label>
+      <br>
+      <button class="btn btn-success" (click)="courseMethod()"> Courses </button>
+      <ul>
+        <li><p>{{course}}</p></li>
+      </ul>
+
+      <button [disabled]="lastName ===''" class="btn btn-danger" (click)="applyMethod()"> Apply </button>
+      <p>{{apply}}</p>
+
+    </div>
+  </div>
+</div>
+
